@@ -1,0 +1,17 @@
+
+Lmod is automatically replacing "cpeGNU/24.11" with "PrgEnv-gnu/8.6.0".
+
+
+Lmod is automatically replacing "cce/18.0.1" with "gcc-native/12.3".
+
+
+Lmod is automatically replacing "PrgEnv-cray/8.6.0" with "cpeGNU/24.11".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-libsci/24.11.0     2) cray-mpich/8.1.31
+
++ srun --exclusive python3 run_microcircuit.py
+/cfs/klemming/projects/supr/naiss2024-22-1457/miahafiz/nest_dardel/cortical_microcircuit_nompi/network.py:210: UserWarning:DC input created to compensate missing Poisson input.
+
++ set +x

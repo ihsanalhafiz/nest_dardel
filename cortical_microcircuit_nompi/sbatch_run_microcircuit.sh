@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 #SBATCH -A naiss2024-22-1457 -p main
 #SBATCH --time=00:30:00
-#SBATCH --nodes=2
-#SBATCH --ntasks-per-node=2
-#SBATCH --cpus-per-task=64
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=32
 #SBATCH --hint=nomultithread
 #SBATCH --job-name=run_microcircuit      # Job name
 #SBATCH --error=./slurm_logs/run_microcircuit_%j.err         # Error file (%j expands to jobID)
@@ -44,25 +44,15 @@ echo "SLURM_NODELIST=${SLURM_NODELIST:-unknown}"
 echo "=== [INFO] SBATCH directives (from this script) ==="
 grep '^#SBATCH' "$0" || true
 
-#echo "=== [INFO] System and resource details ==="
-#command -v lscpu >/dev/null 2>&1 && lscpu || echo "lscpu not available"
-#command -v numactl >/dev/null 2>&1 && numactl --hardware || echo "numactl not available"
-#command -v free >/dev/null 2>&1 && free -h || echo "free not available"
-#ulimit -a || true
-
 echo "=== [INFO] Environment snapshot (selected) ==="
 echo "PATH=${PATH}"
 echo "PYTHONPATH=${PYTHONPATH:-}"
 echo "OMP_NUM_THREADS=${SLURM_CPUS_PER_TASK:-} MKL_NUM_THREADS=${MKL_NUM_THREADS:-}"
 
 ml PDC 
-ml openmpi
-ml mpi4py
 ml miniconda3
 
-#source activate /cfs/klemming/home/m/miahafiz/miahafiz_klemming/nest
-set +u
-source activate /cfs/klemming/home/m/miahafiz/miahafiz_klemming/nest_mpi
+source activate /cfs/klemming/home/m/miahafiz/miahafiz_klemming/nest_nompi
 
 echo "=== [INFO] Module list ==="
 module list 2>&1 || true
@@ -111,7 +101,7 @@ PY
 echo "=== [INFO] Launching workload ==="
 
 set -x
-mpirun -n $SLURM_NTASKS python3 run_microcircuit.py
+srun --exclusive python3 run_microcircuit.py
 set +x
 
 end_ts=$(date -Is)
