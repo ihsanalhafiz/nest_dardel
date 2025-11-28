@@ -1,0 +1,117 @@
+=== [INFO] Job starting at: 2025-11-28T14:57:01+01:00 ===
+=== [INFO] Basic job info ===
+User: miahafiz
+Host: nid001109
+Working dir: /cfs/klemming/home/m/miahafiz/miahafiz_klemming/nest_dardel/sudoku
+SLURM_JOB_ID=14417340 SLURM_JOB_NAME=sudoku_solver
+SLURM_NTASKS=1 SLURM_CPUS_PER_TASK=8
+SLURM_NODELIST=nid001109
+=== [INFO] SBATCH directives (from this script) ===
+#SBATCH -A naiss2024-22-1457 -p main
+#SBATCH --time=00:30:00
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=8
+#SBATCH --hint=nomultithread
+#SBATCH --job-name=sudoku_solver      # Job name
+#SBATCH --error=./slurm_logs/sudoku_solver_%j.err         # Error file (%j expands to jobID)
+#SBATCH --output=./slurm_logs/sudoku_solver_%j.out         # Output file (%j expands to jobID)
+#SBATCH --open-mode=append
+#SBATCH --mail-user=ihsanalhafiz28@gmail.com
+#SBATCH --mail-type=BEGIN,END,FAIL       # options: BEGIN,END,FAIL,REQUEUE,TIME_LIMIT,ALL
+=== [INFO] Environment snapshot (selected) ===
+PATH=/cfs/klemming/home/m/miahafiz/.cursor-server/cli/servers/Stable-60d42bed27e5775c43ec0428d8c653c49e58e260/server/bin/remote-cli:/pdc/software/modules/systemdefault/bin:/opt/cray/pe/mpich/8.1.31/ofi/crayclang/17.0/bin:/opt/cray/pe/mpich/8.1.31/bin:/opt/cray/pe/craype/2.7.33/bin:/opt/cray/pe/cce/18.0.1/binutils/x86_64/x86_64-pc-linux-gnu/bin:/opt/cray/pe/cce/18.0.1/binutils/cross/x86_64-aarch64/aarch64-linux-gnu/../bin:/opt/cray/pe/cce/18.0.1/utils/x86_64/bin:/opt/cray/pe/cce/18.0.1/bin:/opt/cray/pe/perftools/24.11.0/bin:/opt/cray/pe/papi/7.1.0.4/bin:/opt/cray/libfabric/1.22.0/bin:/opt/clmgr/sbin:/opt/clmgr/bin:/opt/sgi/sbin:/opt/sgi/bin:/usr/local/bin:/usr/bin:/bin:/opt/c3/bin:/usr/lib/mit/bin:/opt/cray/pe/bin:/pdc/software/tools
+PYTHONPATH=
+OMP_NUM_THREADS=8 MKL_NUM_THREADS=
+=== [INFO] Module list ===
+
+Currently Loaded Modules:
+  1) craype-x86-rome
+  2) libfabric/1.22.0
+  3) craype-network-ofi
+  4) xpmem/2.9.6-1.1_20240510205610__g087dc11fc19d
+  5) snic-env/1.0.0
+  6) systemdefault/1.0.0                           (S)
+  7) perftools-base/24.11.0
+  8) cpe/24.11
+  9) PDC/24.11
+ 10) openmpi/5.0.8-gcc12.2.0-multi-node
+ 11) cray-python/3.11.7
+ 12) mpi4py/4.1.0-py311
+ 13) craype-accel-host
+ 14) gcc-native/12.3
+ 15) cray-pmi/6.1.15
+ 16) craype/2.7.33
+ 17) cray-mpich/8.1.31
+ 18) cray-libsci/24.11.0
+ 19) cray-dsmml/0.3.0
+ 20) cpeGNU/24.11
+ 21) miniconda3/25.3.1-1-cpeGNU-24.11
+
+  Where:
+   S:  Module is Sticky, requires --force to unload or purge
+
+ 
+
+=== [INFO] Conda environment ===
+CONDA_DEFAULT_ENV=/cfs/klemming/home/m/miahafiz/miahafiz_klemming/nest_nompi
+CONDA_PREFIX=/cfs/klemming/home/m/miahafiz/miahafiz_klemming/nest_nompi
+
+# conda environments:
+#
+                       /cfs/klemming/home/m/miahafiz/miahafiz_klemming/nest39
+                       /cfs/klemming/home/m/miahafiz/miahafiz_klemming/nest_mpi
+                     * /cfs/klemming/home/m/miahafiz/miahafiz_klemming/nest_nompi
+nest39                 /cfs/klemming/projects/supr/naiss2024-22-1457/miahafiz/nest39
+nest_mpi               /cfs/klemming/projects/supr/naiss2024-22-1457/miahafiz/nest_mpi
+nest_nompi             /cfs/klemming/projects/supr/naiss2024-22-1457/miahafiz/nest_nompi
+base                   /pdc/software/24.11/eb/software/miniconda3/25.3.1-1-cpeGNU-24.11
+
+=== [INFO] Python runtime ===
+Python 3.14.0
+platform: Linux-5.14.21-150500.55.65_13.0.73-cray_shasta_c-x86_64-with-glibc2.31
+python: 3.14.0 | packaged by conda-forge | (main, Oct 22 2025, 23:24:08) [GCC 14.3.0]
+=== [INFO] sudoku_solver.py simulation parameters ===
+[INFO] [2025.11.28 14:57:25 /home/conda/feedstock_root/build_artifacts/nest-simulator_1759388055381/work/nestkernel/vp_manager.cpp:74 @ VPManager::initialize()] : OMP_NUM_THREADS is set in your environment, but NEST ignores it.
+For details, see the Guide to parallel computing in the NEST Documentation.
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.9.0
+ Built: Oct  2 2025 06:57:57
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+done.
+puzzle_index: 1
+noise_rate: 350
+sim_time: 100
+max_sim_time: 10000
+max_iterations: 100
+=== [INFO] Launching workload ===
+[INFO] [2025.11.28 14:57:53 /home/conda/feedstock_root/build_artifacts/nest-simulator_1759388055381/work/nestkernel/vp_manager.cpp:74 @ VPManager::initialize()] : OMP_NUM_THREADS is set in your environment, but NEST ignores it.
+For details, see the Guide to parallel computing in the NEST Documentation.
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.9.0
+ Built: Oct  2 2025 06:57:57
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+done.
+=== [INFO] Job finished at: 2025-11-28T14:58:06+01:00 ===

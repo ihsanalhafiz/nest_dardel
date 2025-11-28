@@ -1,0 +1,204 @@
+=== [INFO] Job starting at: 2025-11-28T15:49:48+01:00 ===
+=== [INFO] Basic job info ===
+User: miahafiz
+Host: nid002018
+Working dir: /cfs/klemming/home/m/miahafiz/miahafiz_klemming/nest_dardel/cortical_microcircuit_nompi
+SLURM_JOB_ID=14418104 SLURM_JOB_NAME=run_microcircuit
+SLURM_NTASKS=1 SLURM_CPUS_PER_TASK=128
+SLURM_NODELIST=nid002018
+=== [INFO] Environment snapshot (selected) ===
+PATH=/opt/cray/pe/perftools/24.11.0/bin:/opt/cray/pe/papi/7.1.0.4/bin:/cfs/klemming/home/m/miahafiz/.cursor-server/cli/servers/Stable-60d42bed27e5775c43ec0428d8c653c49e58e260/server/bin/remote-cli:/pdc/software/modules/systemdefault/bin:/opt/cray/pe/mpich/8.1.31/ofi/crayclang/17.0/bin:/opt/cray/pe/mpich/8.1.31/bin:/opt/cray/pe/craype/2.7.33/bin:/opt/cray/pe/cce/18.0.1/binutils/x86_64/x86_64-pc-linux-gnu/bin:/opt/cray/pe/cce/18.0.1/binutils/cross/x86_64-aarch64/aarch64-linux-gnu/../bin:/opt/cray/pe/cce/18.0.1/utils/x86_64/bin:/opt/cray/pe/cce/18.0.1/bin:/opt/cray/libfabric/1.22.0/bin:/opt/clmgr/sbin:/opt/clmgr/bin:/opt/sgi/sbin:/opt/sgi/bin:/usr/local/bin:/usr/bin:/bin:/opt/c3/bin:/usr/lib/mit/bin:/opt/cray/pe/bin:/pdc/software/tools
+PYTHONPATH=
+OMP_NUM_THREADS=128 MKL_NUM_THREADS=
+=== [INFO] SBATCH directives (from this script) ===
+#SBATCH -A naiss2024-22-1457 -p main
+#SBATCH --time=00:30:00
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=128
+#SBATCH --hint=nomultithread
+#SBATCH --job-name=run_microcircuit
+#SBATCH --error=./slurm_logs/run_microcircuit_%j.err
+#SBATCH --output=./slurm_logs/run_microcircuit_%j.out
+#SBATCH --open-mode=append
+#SBATCH --mail-user=ihsanalhafiz28@gmail.com
+#SBATCH --mail-type=BEGIN,END,FAIL
+=== [INFO] Loading Modules ===
+=== [INFO] Module list ===
+
+Currently Loaded Modules:
+  1) craype-x86-rome
+  2) libfabric/1.22.0
+  3) craype-network-ofi
+  4) xpmem/2.9.6-1.1_20240510205610__g087dc11fc19d
+  5) snic-env/1.0.0
+  6) systemdefault/1.0.0                           (S)
+  7) cpe/24.11
+  8) PDC/24.11
+  9) craype-accel-host
+ 10) PrgEnv-gnu/8.6.0
+ 11) craype/2.7.33
+ 12) cray-mpich/8.1.31
+ 13) cray-libsci/24.11.0
+ 14) cray-dsmml/0.3.0
+ 15) cray-pmi/6.1.15
+ 16) gcc-native/12.3
+ 17) cpeGNU/24.11
+ 18) miniconda3/25.3.1-1-cpeGNU-24.11
+ 19) perftools-base/24.11.0
+ 20) perftools
+
+  Where:
+   S:  Module is Sticky, requires --force to unload or purge
+
+ 
+
+=== [INFO] Conda environment ===
+CONDA_DEFAULT_ENV=/cfs/klemming/home/m/miahafiz/miahafiz_klemming/nest_nompi
+CONDA_PREFIX=/cfs/klemming/home/m/miahafiz/miahafiz_klemming/nest_nompi
+
+# conda environments:
+#
+                       /cfs/klemming/home/m/miahafiz/miahafiz_klemming/nest39
+                       /cfs/klemming/home/m/miahafiz/miahafiz_klemming/nest_mpi
+                     * /cfs/klemming/home/m/miahafiz/miahafiz_klemming/nest_nompi
+nest39                 /cfs/klemming/projects/supr/naiss2024-22-1457/miahafiz/nest39
+nest_mpi               /cfs/klemming/projects/supr/naiss2024-22-1457/miahafiz/nest_mpi
+nest_nompi             /cfs/klemming/projects/supr/naiss2024-22-1457/miahafiz/nest_nompi
+base                   /pdc/software/24.11/eb/software/miniconda3/25.3.1-1-cpeGNU-24.11
+
+=== [INFO] Python runtime ===
+Python 3.14.0
+platform: Linux-5.14.21-150500.55.65_13.0.73-cray_shasta_c-x86_64-with-glibc2.31
+python: 3.14.0 | packaged by conda-forge | (main, Oct 22 2025, 23:24:08) [GCC 14.3.0]
+=== [INFO] Simulation and network parameters snapshot ===
+---- sim_params.py (sim_dict) ----
+{'data_path': '/cfs/klemming/projects/supr/naiss2024-22-1457/miahafiz/nest_dardel/cortical_microcircuit_nompi/data/',
+ 'local_num_threads': 128,
+ 'overwrite_files': True,
+ 'print_time': False,
+ 'rec_V_int': 1.0,
+ 'rec_dev': [],
+ 'rng_seed': 55,
+ 'sim_resolution': 0.1,
+ 't_presim': 0.0,
+ 't_sim': 10000.0}
+
+---- network_params.py (net_dict) ----
+{'K_ext': array([1600, 1500, 2100, 1900, 2000, 1900, 2900, 2100]),
+ 'K_scaling': 1,
+ 'N_scaling': 1,
+ 'PSP_exc_mean': 0.15,
+ 'PSP_matrix_mean': array([[ 0.15, -0.6 ,  0.3 , -0.6 ,  0.15, -0.6 ,  0.15, -0.6 ],
+       [ 0.15, -0.6 ,  0.15, -0.6 ,  0.15, -0.6 ,  0.15, -0.6 ],
+       [ 0.15, -0.6 ,  0.15, -0.6 ,  0.15, -0.6 ,  0.15, -0.6 ],
+       [ 0.15, -0.6 ,  0.15, -0.6 ,  0.15, -0.6 ,  0.15, -0.6 ],
+       [ 0.15, -0.6 ,  0.15, -0.6 ,  0.15, -0.6 ,  0.15, -0.6 ],
+       [ 0.15, -0.6 ,  0.15, -0.6 ,  0.15, -0.6 ,  0.15, -0.6 ],
+       [ 0.15, -0.6 ,  0.15, -0.6 ,  0.15, -0.6 ,  0.15, -0.6 ],
+       [ 0.15, -0.6 ,  0.15, -0.6 ,  0.15, -0.6 ,  0.15, -0.6 ]]),
+ 'V0_type': 'optimized',
+ 'bg_rate': 8.0,
+ 'conn_probs': array([[0.1009, 0.1689, 0.0437, 0.0818, 0.0323, 0.    , 0.0076, 0.    ],
+       [0.1346, 0.1371, 0.0316, 0.0515, 0.0755, 0.    , 0.0042, 0.    ],
+       [0.0077, 0.0059, 0.0497, 0.135 , 0.0067, 0.0003, 0.0453, 0.    ],
+       [0.0691, 0.0029, 0.0794, 0.1597, 0.0033, 0.    , 0.1057, 0.    ],
+       [0.1004, 0.0622, 0.0505, 0.0057, 0.0831, 0.3726, 0.0204, 0.    ],
+       [0.0548, 0.0269, 0.0257, 0.0022, 0.06  , 0.3158, 0.0086, 0.    ],
+       [0.0156, 0.0066, 0.0211, 0.0166, 0.0572, 0.0197, 0.0396, 0.2252],
+       [0.0364, 0.001 , 0.0034, 0.0005, 0.0277, 0.008 , 0.0658, 0.1443]]),
+ 'delay_exc_mean': 1.5,
+ 'delay_inh_mean': 0.75,
+ 'delay_matrix_mean': array([[1.5 , 0.75, 1.5 , 0.75, 1.5 , 0.75, 1.5 , 0.75],
+       [1.5 , 0.75, 1.5 , 0.75, 1.5 , 0.75, 1.5 , 0.75],
+       [1.5 , 0.75, 1.5 , 0.75, 1.5 , 0.75, 1.5 , 0.75],
+       [1.5 , 0.75, 1.5 , 0.75, 1.5 , 0.75, 1.5 , 0.75],
+       [1.5 , 0.75, 1.5 , 0.75, 1.5 , 0.75, 1.5 , 0.75],
+       [1.5 , 0.75, 1.5 , 0.75, 1.5 , 0.75, 1.5 , 0.75],
+       [1.5 , 0.75, 1.5 , 0.75, 1.5 , 0.75, 1.5 , 0.75],
+       [1.5 , 0.75, 1.5 , 0.75, 1.5 , 0.75, 1.5 , 0.75]]),
+ 'delay_poisson': 1.5,
+ 'delay_rel_std': 0.5,
+ 'full_mean_rates': array([0.903, 2.965, 4.414, 5.876, 7.569, 8.633, 1.105, 7.829]),
+ 'full_num_neurons': array([20683,  5834, 21915,  5479,  4850,  1065, 14395,  2948]),
+ 'g': -4,
+ 'neuron_model': 'iaf_psc_exp',
+ 'neuron_params': {'C_m': 250.0,
+                   'E_L': -65.0,
+                   'V0_mean': {'optimized': [-68.28, -63.16, -63.33, -63.45, -63.11, -61.66, -66.72, -61.43],
+                               'original': -58.0},
+                   'V0_std': {'optimized': [5.36, 4.57, 4.74, 4.94, 4.94, 4.55, 5.46, 4.48], 'original': 10.0},
+                   'V_reset': -65.0,
+                   'V_th': -50.0,
+                   't_ref': 2.0,
+                   'tau_m': 10.0,
+                   'tau_syn': 0.5},
+ 'poisson_input': False,
+ 'populations': ['L23E', 'L23I', 'L4E', 'L4I', 'L5E', 'L5I', 'L6E', 'L6I'],
+ 'weight_rel_std': 0.1}
+=== [INFO] Environment Ready ===
+=== [INFO] Launching workload with Cray PAT ===
+Profiling data will be saved to: profile_microcircuit_14418104
+[INFO] [2025.11.28 15:50:6 /home/conda/feedstock_root/build_artifacts/nest-simulator_1759388055381/work/nestkernel/vp_manager.cpp:74 @ VPManager::initialize()] : OMP_NUM_THREADS is set in your environment, but NEST ignores it.
+For details, see the Guide to parallel computing in the NEST Documentation.
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.9.0
+ Built: Oct  2 2025 06:57:57
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+
+Nov 28 15:50:20 VPManager::initialize() [Info]: 
+    OMP_NUM_THREADS is set in your environment, but NEST ignores it.
+    For details, see the Guide to parallel computing in the NEST Documentation.
+
+Nov 28 15:50:20 SimulationManager::set_status [Info]: 
+    Temporal resolution changed from 0.1 to 0.1 ms.
+
+Nov 28 15:50:31 NodeManager::prepare_nodes [Info]: 
+    Preparing 77169 nodes for simulation.
+
+Nov 28 15:50:34 NodeManager::prepare_nodes [Info]: 
+    Preparing 77169 nodes for simulation.
+
+Nov 28 15:50:34 NodeManager::prepare_nodes [Info]: 
+    Preparing 77169 nodes for simulation.
+
+Nov 28 15:50:34 SimulationManager::start_updating_ [Info]: 
+    Number of local nodes: 77169
+    Simulation time (ms): 10000
+    Number of OpenMP threads: 128
+    Not using MPI
+
+Nov 28 15:50:41 SimulationManager::run [Info]: 
+    Simulation finished.
+Data will be written to: /cfs/klemming/projects/supr/naiss2024-22-1457/miahafiz/nest_dardel/cortical_microcircuit_nompi/data/
+  Directory already existed. Old data will be overwritten.
+
+
+RNG seed: 55
+Total number of virtual processes: 128
+Creating neuronal populations.
+Connecting neuronal populations recurrently.
+Simulating 0.0 ms.
+Simulating 10000.0 ms.
+
+Times of Rank 0:
+  Total time:          20.553 s
+  Time to initialize:  0.142 s
+  Time to create:      1.740 s
+  Time to connect:     12.315 s
+  Time to presimulate: 0.001 s
+  Time to simulate:    6.354 s
+
+=== [INFO] Generating Power Report ===
+=== [INFO] Job finished at: 2025-11-28T15:50:48+01:00 ===

@@ -1,0 +1,65 @@
+=== [INFO] Loading Modules ===
+=== [INFO] Environment Ready ===
+=== [INFO] Launching workload with Cray PAT ===
+[INFO] [2025.11.28 14:57:20 /home/conda/feedstock_root/build_artifacts/nest-simulator_1759388055381/work/nestkernel/vp_manager.cpp:74 @ VPManager::initialize()] : OMP_NUM_THREADS is set in your environment, but NEST ignores it.
+For details, see the Guide to parallel computing in the NEST Documentation.
+
+              -- N E S T --
+  Copyright (C) 2004 The NEST Initiative
+
+ Version: 3.9.0
+ Built: Oct  2 2025 06:57:57
+
+ This program is provided AS IS and comes with
+ NO WARRANTY. See the file LICENSE for details.
+
+ Problems or suggestions?
+   Visit https://www.nest-simulator.org
+
+ Type 'nest.help()' to find out more about NEST.
+
+
+Nov 28 14:57:32 VPManager::initialize() [Info]: 
+    OMP_NUM_THREADS is set in your environment, but NEST ignores it.
+    For details, see the Guide to parallel computing in the NEST Documentation.
+
+Nov 28 14:57:32 SimulationManager::set_status [Info]: 
+    Temporal resolution changed from 0.1 to 0.1 ms.
+
+Nov 28 14:57:43 NodeManager::prepare_nodes [Info]: 
+    Preparing 77169 nodes for simulation.
+
+Nov 28 14:57:46 NodeManager::prepare_nodes [Info]: 
+    Preparing 77169 nodes for simulation.
+
+Nov 28 14:57:46 NodeManager::prepare_nodes [Info]: 
+    Preparing 77169 nodes for simulation.
+
+Nov 28 14:57:46 SimulationManager::start_updating_ [Info]: 
+    Number of local nodes: 77169
+    Simulation time (ms): 10000
+    Number of OpenMP threads: 128
+    Not using MPI
+
+Nov 28 14:57:53 SimulationManager::run [Info]: 
+    Simulation finished.
+Data will be written to: /cfs/klemming/projects/supr/naiss2024-22-1457/miahafiz/nest_dardel/cortical_microcircuit_nompi/data/
+  Directory already existed. Old data will be overwritten.
+
+
+RNG seed: 55
+Total number of virtual processes: 128
+Creating neuronal populations.
+Connecting neuronal populations recurrently.
+Simulating 0.0 ms.
+Simulating 10000.0 ms.
+
+Times of Rank 0:
+  Total time:          20.485 s
+  Time to initialize:  0.147 s
+  Time to create:      1.715 s
+  Time to connect:     12.255 s
+  Time to presimulate: 0.001 s
+  Time to simulate:    6.366 s
+
+=== [INFO] Job finished at: 2025-11-28T14:57:56+01:00 ===

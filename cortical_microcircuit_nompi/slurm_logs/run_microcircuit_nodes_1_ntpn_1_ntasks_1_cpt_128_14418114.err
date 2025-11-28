@@ -1,0 +1,24 @@
+
+Lmod is automatically replacing "cpeGNU/24.11" with "PrgEnv-gnu/8.6.0".
+
+
+Lmod is automatically replacing "cce/18.0.1" with "gcc-native/12.3".
+
+
+Lmod is automatically replacing "PrgEnv-cray/8.6.0" with "cpeGNU/24.11".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-libsci/24.11.0     2) cray-mpich/8.1.31
+
++ srun --exclusive pat_run -w -g energy python3 run_microcircuit.py
+WARNING: For optimal performance analysis load the 'perftools-preload' module before linking the executable file.
+WARNING: Specified trace group 'energy' is not valid and ignored.
+CrayPat/X:  Version 24.11.0 Revision 31a512b4d sles15.5_x86_64  10/02/24 19:11:06
+pat[WARNING][0]: __pat_python_get_version: Python tracing disabled: Unsupported minor version 14 detected.
+/cfs/klemming/projects/supr/naiss2024-22-1457/miahafiz/nest_dardel/cortical_microcircuit_nompi/network.py:210: UserWarning:DC input created to compensate missing Poisson input.
+
+Experiment data directory written:
+/cfs/klemming/projects/supr/naiss2024-22-1457/miahafiz/nest_dardel/cortical_microcircuit_nompi/profile_microcircuit_14418114
++ set +x
+Processing step 1 of 7Processing step 2 of 7Processing step 3 of 7Processing step 4 of 7Processing step 5 of 7Processing step 6 of 7Processing step 7 of 7

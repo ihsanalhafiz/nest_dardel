@@ -1,0 +1,235 @@
+
+Lmod is automatically replacing "cce/18.0.1" with "gcc-native/13.2".
+
+
+Lmod is automatically replacing "PrgEnv-cray/8.6.0" with "PrgEnv-gnu/8.6.0".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-libsci/24.11.0     2) cray-mpich/8.1.31
+
+
+Lmod is automatically replacing "PrgEnv-gnu/8.6.0" with "cpeGNU/24.11".
+
+
+The following have been reloaded with a version change:
+  1) gcc-native/13.2 => gcc-native/12.3
+
+INFO:root:Creating neuron populations...
+INFO:root:Setting up noise...
+INFO:root:Creating inter-neuron and IO-connections...
+INFO:root:setting input...
+INFO:root:Setup complete.
+INFO:root:0ms, performance: 0.111
+INFO:root:100ms, performance: 0.222
+INFO:root:200ms, performance: 0.593
+INFO:root:300ms, performance: 0.667
+INFO:root:400ms, performance: 0.593
+INFO:root:500ms, performance: 0.741
+INFO:root:600ms, performance: 0.741
+INFO:root:700ms, performance: 0.815
+INFO:root:800ms, performance: 0.778
+INFO:root:900ms, performance: 0.741
+INFO:root:1000ms, performance: 0.667
+INFO:root:1100ms, performance: 0.778
+INFO:root:1200ms, performance: 0.778
+INFO:root:1300ms, performance: 0.741
+INFO:root:1400ms, performance: 0.704
+INFO:root:1500ms, performance: 0.815
+INFO:root:1600ms, performance: 0.778
+INFO:root:1700ms, performance: 0.926
+INFO:root:1800ms, performance: 0.815
+INFO:root:1900ms, performance: 0.815
+INFO:root:2000ms, performance: 0.815
+INFO:root:2100ms, performance: 0.889
+INFO:root:2200ms, performance: 0.852
+INFO:root:2300ms, performance: 0.778
+INFO:root:2400ms, performance: 0.778
+INFO:root:2500ms, performance: 0.852
+INFO:root:2600ms, performance: 0.926
+INFO:root:2700ms, performance: 0.852
+INFO:root:2800ms, performance: 0.852
+INFO:root:2900ms, performance: 0.815
+INFO:root:3000ms, performance: 0.852
+INFO:root:3100ms, performance: 0.889
+INFO:root:3200ms, performance: 0.926
+INFO:root:3300ms, performance: 0.852
+INFO:root:3400ms, performance: 0.852
+INFO:root:3500ms, performance: 0.889
+INFO:root:3600ms, performance: 0.852
+INFO:root:3700ms, performance: 0.889
+INFO:root:3800ms, performance: 0.852
+INFO:root:3900ms, performance: 0.926
+INFO:root:4000ms, performance: 0.852
+INFO:root:4100ms, performance: 0.815
+INFO:root:4200ms, performance: 0.889
+INFO:root:4300ms, performance: 0.815
+INFO:root:4400ms, performance: 0.852
+INFO:root:4500ms, performance: 0.926
+INFO:root:4600ms, performance: 0.926
+INFO:root:4700ms, performance: 0.852
+INFO:root:4800ms, performance: 0.815
+INFO:root:4900ms, performance: 0.852
+INFO:root:5000ms, performance: 0.852
+INFO:root:5100ms, performance: 0.889
+INFO:root:5200ms, performance: 0.852
+INFO:root:5300ms, performance: 0.926
+INFO:root:5400ms, performance: 0.889
+INFO:root:5500ms, performance: 0.852
+INFO:root:5600ms, performance: 0.889
+INFO:root:5700ms, performance: 0.852
+INFO:root:5800ms, performance: 0.926
+INFO:root:5900ms, performance: 0.926
+INFO:root:6000ms, performance: 0.926
+INFO:root:6100ms, performance: 0.926
+INFO:root:6200ms, performance: 0.852
+INFO:root:6300ms, performance: 0.926
+INFO:root:6400ms, performance: 0.926
+INFO:root:6500ms, performance: 0.852
+INFO:root:6600ms, performance: 0.889
+INFO:root:6700ms, performance: 0.889
+INFO:root:6800ms, performance: 0.815
+INFO:root:6900ms, performance: 0.815
+INFO:root:7000ms, performance: 0.852
+INFO:root:7100ms, performance: 0.889
+INFO:root:7200ms, performance: 0.815
+INFO:root:7300ms, performance: 0.852
+INFO:root:7400ms, performance: 0.926
+INFO:root:7500ms, performance: 0.889
+INFO:root:7600ms, performance: 0.815
+INFO:root:7700ms, performance: 0.852
+INFO:root:7800ms, performance: 0.889
+INFO:root:7900ms, performance: 0.815
+INFO:root:8000ms, performance: 0.889
+INFO:root:8100ms, performance: 0.852
+INFO:root:8200ms, performance: 0.815
+INFO:root:8300ms, performance: 0.815
+INFO:root:8400ms, performance: 0.889
+INFO:root:8500ms, performance: 0.815
+INFO:root:8600ms, performance: 0.889
+INFO:root:8700ms, performance: 0.889
+INFO:root:8800ms, performance: 0.889
+INFO:root:8900ms, performance: 0.815
+INFO:root:9000ms, performance: 0.889
+INFO:root:9100ms, performance: 0.926
+INFO:root:9200ms, performance: 0.852
+INFO:root:9300ms, performance: 0.889
+INFO:root:9400ms, performance: 0.852
+INFO:root:9500ms, performance: 0.852
+INFO:root:9600ms, performance: 0.778
+INFO:root:9700ms, performance: 0.852
+INFO:root:9800ms, performance: 0.852
+INFO:root:9900ms, performance: 0.815
+INFO:root:no solution found after 10000ms, aborting.
+INFO:root:storing final state to: sudoku_solution_threads8_puzzle1.png...
+INFO:root:storing simulation data to 350Hz_puzzle_1.pkl...
++ srun --exclusive python3 sudoku_solver.py
+INFO:root:Creating neuron populations...
+INFO:root:Setting up noise...
+INFO:root:Creating inter-neuron and IO-connections...
+INFO:root:setting input...
+INFO:root:Setup complete.
+INFO:root:0ms, performance: 0.111
+INFO:root:100ms, performance: 0.222
+INFO:root:200ms, performance: 0.593
+INFO:root:300ms, performance: 0.667
+INFO:root:400ms, performance: 0.593
+INFO:root:500ms, performance: 0.741
+INFO:root:600ms, performance: 0.741
+INFO:root:700ms, performance: 0.815
+INFO:root:800ms, performance: 0.778
+INFO:root:900ms, performance: 0.741
+INFO:root:1000ms, performance: 0.667
+INFO:root:1100ms, performance: 0.778
+INFO:root:1200ms, performance: 0.778
+INFO:root:1300ms, performance: 0.741
+INFO:root:1400ms, performance: 0.704
+INFO:root:1500ms, performance: 0.815
+INFO:root:1600ms, performance: 0.778
+INFO:root:1700ms, performance: 0.926
+INFO:root:1800ms, performance: 0.815
+INFO:root:1900ms, performance: 0.815
+INFO:root:2000ms, performance: 0.815
+INFO:root:2100ms, performance: 0.889
+INFO:root:2200ms, performance: 0.852
+INFO:root:2300ms, performance: 0.778
+INFO:root:2400ms, performance: 0.778
+INFO:root:2500ms, performance: 0.852
+INFO:root:2600ms, performance: 0.926
+INFO:root:2700ms, performance: 0.852
+INFO:root:2800ms, performance: 0.852
+INFO:root:2900ms, performance: 0.815
+INFO:root:3000ms, performance: 0.852
+INFO:root:3100ms, performance: 0.889
+INFO:root:3200ms, performance: 0.926
+INFO:root:3300ms, performance: 0.852
+INFO:root:3400ms, performance: 0.852
+INFO:root:3500ms, performance: 0.889
+INFO:root:3600ms, performance: 0.852
+INFO:root:3700ms, performance: 0.889
+INFO:root:3800ms, performance: 0.852
+INFO:root:3900ms, performance: 0.889
+INFO:root:4000ms, performance: 0.852
+INFO:root:4100ms, performance: 0.815
+INFO:root:4200ms, performance: 0.889
+INFO:root:4300ms, performance: 0.815
+INFO:root:4400ms, performance: 0.852
+INFO:root:4500ms, performance: 0.926
+INFO:root:4600ms, performance: 0.926
+INFO:root:4700ms, performance: 0.852
+INFO:root:4800ms, performance: 0.815
+INFO:root:4900ms, performance: 0.852
+INFO:root:5000ms, performance: 0.852
+INFO:root:5100ms, performance: 0.889
+INFO:root:5200ms, performance: 0.852
+INFO:root:5300ms, performance: 0.926
+INFO:root:5400ms, performance: 0.889
+INFO:root:5500ms, performance: 0.852
+INFO:root:5600ms, performance: 0.889
+INFO:root:5700ms, performance: 0.852
+INFO:root:5800ms, performance: 0.926
+INFO:root:5900ms, performance: 0.926
+INFO:root:6000ms, performance: 0.926
+INFO:root:6100ms, performance: 0.926
+INFO:root:6200ms, performance: 0.852
+INFO:root:6300ms, performance: 0.926
+INFO:root:6400ms, performance: 0.926
+INFO:root:6500ms, performance: 0.852
+INFO:root:6600ms, performance: 0.889
+INFO:root:6700ms, performance: 0.889
+INFO:root:6800ms, performance: 0.815
+INFO:root:6900ms, performance: 0.815
+INFO:root:7000ms, performance: 0.852
+INFO:root:7100ms, performance: 0.889
+INFO:root:7200ms, performance: 0.815
+INFO:root:7300ms, performance: 0.852
+INFO:root:7400ms, performance: 0.926
+INFO:root:7500ms, performance: 0.889
+INFO:root:7600ms, performance: 0.815
+INFO:root:7700ms, performance: 0.852
+INFO:root:7800ms, performance: 0.889
+INFO:root:7900ms, performance: 0.815
+INFO:root:8000ms, performance: 0.889
+INFO:root:8100ms, performance: 0.852
+INFO:root:8200ms, performance: 0.815
+INFO:root:8300ms, performance: 0.815
+INFO:root:8400ms, performance: 0.889
+INFO:root:8500ms, performance: 0.815
+INFO:root:8600ms, performance: 0.889
+INFO:root:8700ms, performance: 0.889
+INFO:root:8800ms, performance: 0.889
+INFO:root:8900ms, performance: 0.889
+INFO:root:9000ms, performance: 0.889
+INFO:root:9100ms, performance: 0.926
+INFO:root:9200ms, performance: 0.852
+INFO:root:9300ms, performance: 0.889
+INFO:root:9400ms, performance: 0.852
+INFO:root:9500ms, performance: 0.852
+INFO:root:9600ms, performance: 0.778
+INFO:root:9700ms, performance: 0.852
+INFO:root:9800ms, performance: 0.852
+INFO:root:9900ms, performance: 0.815
+INFO:root:no solution found after 10000ms, aborting.
+INFO:root:storing final state to: sudoku_solution_threads8_puzzle1.png...
+INFO:root:storing simulation data to 350Hz_puzzle_1.pkl...
++ set +x

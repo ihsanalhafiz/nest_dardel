@@ -1,0 +1,288 @@
+CrayPat/X:  Version 24.11.0 Revision 31a512b4d sles15.5_x86_64  10/02/24 19:11:06
+
+Number of PEs (MPI ranks):    1
+                           
+Numbers of PEs per Node:      1
+                           
+Numbers of Threads per PE:   15
+                           
+Number of Cores per Socket:  64
+
+Execution start time:  Fri Nov 28 17:46:34 2025
+
+System name and speed:  nid001957  2.248 GHz (nominal)
+
+AMD   Rome                 CPU  Family: 23  Model: 49  Stepping:  0
+
+Core Performance Boost:  15 PEs have CPB capability
+
+Current path to data file:
+  /cfs/klemming/home/m/miahafiz/miahafiz_klemming/nest_dardel/cortical_microcircuit_nompi/profile_microcircuit_14420225   (RTS)
+
+
+Notes for table 1:
+
+  This table shows functions that have significant exclusive time,
+    averaged across ranks.
+  For further explanation, see the "General table notes" below, or 
+    use:  pat_report -v -O profile ...
+
+Table 1:  Profile by Function Group and Function
+
+  Time% |       Time | Imb. |  Imb. | Calls | Group
+        |            | Time | Time% |       |  Function
+        |            |      |       |       |   Thread=HIDE
+       
+ 100.0% | 290.610184 |   -- |    -- |  16.0 | Total
+|----------------------------------------------------------
+| 100.0% | 290.594885 |   -- |    -- |   1.0 | USER
+||---------------------------------------------------------
+|| 100.0% | 290.594885 |   -- |    -- |   1.0 | main
+|==========================================================
+
+Notes for table 2:
+
+  This table shows functions that have the most significant exclusive
+    time, taking the maximum time across ranks and threads.
+  For further explanation, see the "General table notes" below, or 
+    use:  pat_report -v -O profile_max ...
+
+Table 2:  Profile of maximum function times
+
+  Time% |       Time | Imb. |  Imb. | Function
+        |            | Time | Time% |  Thread=HIDE
+|-------------------------------------------------
+| 100.0% | 290.594885 |   -- |    -- | main
+|=================================================
+
+Notes for table 3:
+
+  This table shows functions that have the most significant exclusive
+    time, taking for each thread the average time across ranks.
+    The imbalance percentage is relative to the team observed to
+    participate in execution.
+    Use -s th=ALL to see individual thread values.
+  For further explanation, see the "General table notes" below, or 
+    use:  pat_report -v -O profile_th_pe ...
+
+Table 3:  Profile by Function Group and Function with Ranks under Threads
+
+  Time% |       Time | Imb. |  Imb. | Team | Calls | Group
+        |            | Time | Time% | Size |       |  Function
+        |            |      |       |      |       |   Thread=HIDE
+        |            |      |       |      |       |    PE=HIDE
+       
+ 100.0% | 290.610184 |   -- |    -- |   -- |  16.0 | Total
+|-----------------------------------------------------------------
+| 100.0% | 290.594885 |   -- |    -- |   -- |   1.0 | USER
+||----------------------------------------------------------------
+|| 100.0% | 290.594885 |   -- |    -- |    1 |   1.0 | main
+|=================================================================
+
+Notes for table 4:
+
+  This table shows the time in each thread, and the imbalance of time
+    across threads, taking for each thread the maximum time across
+    ranks.
+  For further explanation, see the "General table notes" below, or 
+    use:  pat_report -v -O load_imbalance_thread ...
+
+Table 4:  Load Imbalance by Thread
+
+  Max. Time | Imb. |  Imb. | Thread
+            | Time | Time% |  PE=HIDE
+           
+ 290.910298 |   -- |    -- | Total
+|------------------------------------
+| 290.910298 |   -- |    -- | thread.0
+|====================================
+
+Notes for table 5:
+
+  This table shows energy and power usage for the nodes with the
+    maximum, mean, and minimum usage, as well as the sum of usage over
+    all nodes.
+    Energy and power for accelerators is also shown, if available.
+  For further explanation, see the "General table notes" below, or 
+    use:  pat_report -v -O program_energy ...
+
+Table 5:  Program Energy and Power Usage from Cray PM
+
+Thread=HIDE
+
+  
+============================================================
+  Total
+------------------------------------------------------------
+  PM Energy Node    290 W     84,405 J
+  PM Energy Cpu      67 W     19,445 J
+  PM Energy Memory  130 W     37,858 J
+  Process Time            291.227834 secs
+============================================================
+
+Notes for table 6:
+
+  This table shows values shown for HiMem calculated from information
+    in the /proc/self/numa_maps files captured near the end of the
+    program. It is the total size of all pages, including huge pages,
+    that were actually mapped into physical memory from both private
+    and shared memory segments.
+  For further explanation, see the "General table notes" below, or 
+    use:  pat_report -v -O himem ...
+
+Table 6:  Memory High Water Mark by Numa Node
+
+Numanode
+
+  
+==============================================================================
+  numanode.0
+------------------------------------------------------------------------------
+  Process HiMem (MiBytes)          9,738.7 
+  HiMem Numa Node 0 (MiBytes)      9,702.9 MiBytes
+  HiMem Numa Node 1 (MiBytes)          4.5 MiBytes
+  HiMem Numa Node 2 (MiBytes)          4.5 MiBytes
+  HiMem Numa Node 3 (MiBytes)          4.3 MiBytes
+  HiMem Numa Node 4 (MiBytes)          4.4 MiBytes
+  HiMem Numa Node 5 (MiBytes)          9.1 MiBytes
+  HiMem Numa Node 6 (MiBytes)          4.4 MiBytes
+  HiMem Numa Node 7 (MiBytes)          4.6 MiBytes
+==============================================================================
+
+Notes for table 7:
+
+  This table shows total wall clock time for the ranks with the
+    maximum, mean, and minimum time, as well as the average across
+    ranks.
+    It also shows maximum memory usage from /proc/self/numa_maps for
+    those ranks, and on average.  The usage is total size of all
+    pages, including huge pages, that were actually mapped into
+    physical memory from both private and shared memory segments.
+  For further explanation, see the "General table notes" below, or 
+    use:  pat_report -v -O program_time ...
+
+Table 7:  Wall Clock Time, Memory High Water Mark
+
+    Process |   Process | Thread
+       Time |     HiMem | 
+            | (MiBytes) | 
+           
+ 291.227834 |   9,738.7 | Total
+|---------------------------------
+| 291.227834 |   9,738.7 | thread.0
+|=================================
+
+========================  Additional details  ========================
+
+General table notes:
+
+    The default notes for a table are based on the default definition of
+    the table, and do not account for the effects of command-line options
+    that may modify the content of the table.
+    
+    Detailed notes, produced by the pat_report -v option, do account for
+    all command-line options, and also show how data is aggregated, and
+    if the table content is limited by thresholds, rank selections, etc.
+    
+    An imbalance metric in a line is based on values in main threads
+    across multiple ranks, or on values across all threads, as applicable.
+    
+    An imbalance percent in a line is relative to the maximum value
+    for that line across ranks or threads, as applicable.
+    
+    If the number of Calls for a function is shown as "--", then that
+    function was not traced and the other values in its line summarize
+    the data collected for functions that it calls and that were traced.
+    
+Experiment:  trace
+
+Original path to data file:
+  /cfs/klemming/projects/supr/naiss2024-22-1457/miahafiz/nest_dardel/cortical_microcircuit_nompi/profile_microcircuit_14420225/xf-files   (RTS)
+
+Original program:  /opt/cray/pe/perftools/24.11.0/bin/pat_python
+
+Instrumented with:  pat_run -w -g energy python3 run_microcircuit.py
+
+Program invocation:
+  /opt/cray/pe/perftools/24.11.0/bin/pat_python run_microcircuit.py
+
+Exit Status:  0 for 1 PE
+
+Thread start functions and creator functions:
+     7 threads:  blas_thread_server <- blas_thread_init
+     7 threads:  gomp_thread_start <- gomp_team_start
+     1 thread:  main
+
+Memory pagesize:  4 KiB
+
+Memory hugepagesize:  Not Available
+
+Programming environment:  GNU
+
+Runtime environment variables:
+  CRAYPAT_COMPILER_OPTIONS=1
+  CRAYPAT_LD_LIBRARY_PATH=/opt/cray/pe/perftools/24.11.0/lib64
+  CRAYPAT_OPTS_EXECUTABLE=libexec64/opts
+  CRAYPAT_ROOT=/opt/cray/pe/perftools/24.11.0
+  CRAYPE_VERSION=2.7.33
+  CRAY_DSMML_VERSION=0.3.0
+  CRAY_LIBSCI_VERSION=24.11.0
+  CRAY_MPICH_VERSION=8.1.31
+  CRAY_PERFTOOLS_VERSION=24.11.0
+  CRAY_PE_VERSION=24.11
+  CRAY_PMI_VERSION=6.1.15
+  EBVERSIONCPEGNU=24.11
+  EBVERSIONMINICONDA3=25.3.1-1
+  GCC_VERSION=12.3
+  GNU_VERSION=12.3
+  LMOD_FAMILY_COMPILER_VERSION=12.3
+  LMOD_FAMILY_CPE_VERSION=24.11
+  LMOD_FAMILY_CRAYPE_ACCEL_VERSION=false
+  LMOD_FAMILY_CRAYPE_CPU_VERSION=false
+  LMOD_FAMILY_CRAYPE_NETWORK_VERSION=false
+  LMOD_FAMILY_CRAYPE_VERSION=2.7.33
+  LMOD_FAMILY_GCC_COMPILER_VERSION=12.3
+  LMOD_FAMILY_LIBSCI_VERSION=24.11.0
+  LMOD_FAMILY_MPI_VERSION=8.1.31
+  LMOD_FAMILY_PERFTOOLS_VERSION=false
+  LMOD_FAMILY_PRGENV_VERSION=24.11
+  LMOD_VERSION=8.7.37
+  MPICH_DIR=/opt/cray/pe/mpich/8.1.31/ofi/gnu/12.3
+  OMP_NUM_THREADS=8
+  OMP_PROC_BIND=TRUE
+  PAT_RT_EXPDIR_NAME=profile_microcircuit_14420225
+  PAT_RT_EXPERIMENT=trace
+  PAT_RT_PERFCTR_DISABLE_COMPONENTS=nvml,rocm_smi
+  PAT_RT_PYTHON_DSO=/cfs/klemming/home/m/miahafiz/miahafiz_klemming/nest_nompi/lib/libpython3.14.so.1.0
+  PERFTOOLS_VERSION=24.11.0
+  PMI_CONTROL_PORT=30227
+  PMI_JOBID=14420225
+  PMI_LOCAL_RANK=0
+  PMI_LOCAL_SIZE=1
+  PMI_RANK=0
+  PMI_SHARED_SECRET=6818903635433837941
+  PMI_SIZE=1
+  PMI_UNIVERSE_SIZE=1
+  TERM_PROGRAM_VERSION=2.1.39
+
+Report time environment variables:
+    CRAYPAT_ROOT=/opt/cray/pe/perftools/24.11.0
+
+Number of MPI control variables collected:  152
+
+  (To see the list, specify: -s mpi_cvar=show)
+
+Report command line options:  -o ./power_report/power_report_14420225.txt
+
+Operating system:
+  Linux 5.14.21-150500.55.65_13.0.73-cray_shasta_c #1 SMP Fri Jun 14 21:25:32 UTC 2024 (d052318)
+
+Estimated minimum instrumentation overhead per call of a traced function,
+  which was subtracted from the data shown in this report
+  (for raw data, use the option:  -s overhead=include):
+    Time  0.560  microsecs
+
+Number of traced functions that were called:  7
+
+  (To see the list, specify:  -s traced_functions=show)
+
