@@ -69,7 +69,7 @@ nest.SetKernelStatus({"local_num_threads": 8})
 nest.set_verbosity("M_WARNING")
 logging.basicConfig(level=logging.INFO)
 
-puzzle_index = 4
+puzzle_index = 1
 noise_rate = 350
 sim_time = 100
 max_sim_time = 10000
@@ -119,7 +119,10 @@ while not valid:
         logging.info(f"no solution found after {run*sim_time}ms, aborting.")
         break
 
-img_name = "sudoku_solution.png"
+import os
+
+local_num_threads = int(os.environ.get("OMP_NUM_THREADS", 1))
+img_name = f"sudoku_solution_threads{local_num_threads}_puzzle{puzzle_index}.png"
 logging.info(f"storing final state to: {img_name}...")
 fig, ax = plt.subplots()
 plot_field(puzzle, solution, ax, True)

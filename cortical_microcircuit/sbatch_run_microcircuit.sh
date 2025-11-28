@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #SBATCH -A naiss2024-22-1457 -p main
 #SBATCH --time=00:30:00
-#SBATCH --nodes=2
+#SBATCH --nodes=8
 #SBATCH --ntasks-per-node=2
 #SBATCH --cpus-per-task=64
 #SBATCH --hint=nomultithread
